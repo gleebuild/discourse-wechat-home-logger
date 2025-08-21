@@ -9,8 +9,8 @@ after_initialize do
   require 'fileutils'
 
   module ::DiscourseWechatHomeLogger
-    LOG_DIR = "/var/www/discourse/log"
-    LOG_FILE = File.join(LOG_DIR, "wechat.log")
+    LOG_DIR = "/var/www/discourse/public"
+    LOG_FILE = File.join(LOG_DIR, "wechat.txt")
     HOMEPATHS = ['/', '/latest', '/categories', '/top', '/new', '/hot'].freeze
 
     def self.log!(message)
